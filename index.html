@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link type="text/css" href="asset/css/style.css">
+    
+    <title>Giphy</title>
+</head>
+<body>
+    
+    <div id="btns">
+
+    </div>
+    
+    <div id="images"></div><br><br>
+
+   
+
+      
+            Add an animal:<br>
+            <input id="box" type="text" name="animal" value="">
+<br>
+<br>
+<input type="button" value="Submit" onclick="myFunction()">
+
+
+
+
+  
+
+    <script type="text/javascript">
+//creatiing array with list of animals
+var topics = ["cat", "dog", "lion", "hyna"]
+
+// Storing our giphy API URL for a random cat image
+var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=lwICA0PQjbqisUf67Jf10M5vn41mjCw5";
+
+
+
+
+//creatind btns in the html
+            var div = document.querySelector("#btns");
+
+            for(i=0; i < topics.length; i++) {
+                createBtn();
+            }
+
+            function createBtn(){
+                var btn = document.createElement("button");
+                btn.innerHTML = topics[i];
+                
+                div.appendChild(btn);  
+            }
+
+           //add new animal element to the array
+           function myFunction(){
+    
+           newButton = document.getElementById("box").value;
+           topics.push(newButton);
+           
+
+           document.getElementById("box").value = "";
+           createBtn();
+           
+           }
+           
+        
+
+            
+            
+            
+           
+
+            
+
+            </script>
+
+    
+        </body>
+
+        
+    
+            </html>
